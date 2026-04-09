@@ -9,7 +9,16 @@ Sistema web para gerenciamento de servicos de um petshop (banho e tosa), com fro
    - Selecione **Import from Self-Contained File** e escolha o arquivo `database.sql`
    - Clique em **Start Import**
 
-2. Edite as credenciais de conexao em `backend/config/db.js` se necessario (usuario, senha, host, porta).
+2. Edite as credenciais de conexao em `backend/config/db.js`, trocando a senha do MySQL pela sua:
+
+```js
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'SUA_SENHA_AQUI',
+  database: 'petshop'
+});
+```
 
 ## Backend
 
